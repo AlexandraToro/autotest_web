@@ -1,55 +1,80 @@
-import time
-
 import yaml
-from module import Site
+
+from testpage import OperationHelper
+from post_page import OperationAddPost
+from contact_page import OperationContactUs
+import logging
 
 with open("./testdata.yaml") as f:
 	testdata = yaml.safe_load(f)
-site = Site(testdata['address'])
+
 login = testdata['login']
 password = testdata['password']
 
 
-def test_step1(sel_1, x_selector2, x_selector3, result, btn_selector):
-	input1 = site.find_element('xpath', sel_1)
-	input1.send_keys("test")
-	input2 = site.find_element('xpath', x_selector2)
-	input2.send_keys("test")
-	btn = site.find_element('css', btn_selector)
-	btn.click()
-	err_label = site.find_element('xpath', x_selector3)
-	res = err_label.text
-	assert res == result
+def test_step1(browser):
+	logging.info('test1 running')
+	testpage = OperationHelper(browser)
+	testpage.go_to_site()
+	testpage.enter_login("test")
+	testpage.enter_pass("test")
+	testpage.click_login_button()
+	assert testpage.get_error_text() == "401"
 
 
-def test_step2(sel_1, x_selector2, auth, result2, btn_selector):
-	input1 = site.find_element('xpath', sel_1)
-	input1.clear()
-	input1.send_keys(login)
-	input2 = site.find_element('xpath', x_selector2)
-	input2.clear()
-	input2.send_keys(password)
-	btn = site.find_element('css', btn_selector)
-	btn.click()
-	auth = site.find_element('xpath', auth)
-	res = auth.text
-	assert res == result2
+def test_step2(browser):
+	logging.info('test2 running')
+	testpage = OperationHelper(browser)
+	testpage.enter_login(login)
+	testpage.enter_pass(password)
+	testpage.click_login_button()
+	assert testpage.auth() == f"Hello, {login}"
 
 
-def test_step3(add_post, input_title, post_title, input_description, post_description, input_content,
-               post_content, create_post, check_post):
-	add_post_btn = site.find_element('xpath', add_post)
-	add_post_btn.click()
-	input_title = site.find_element('xpath', input_title)
-	input_title.send_keys(post_title)
-	input_description = site.find_element('xpath', input_description)
-	input_description.send_keys(post_description)
-	input_content = site.find_element('xpath', input_content)
-	input_content.send_keys(post_content)
-	create_post_btn = site.find_element('xpath', create_post)
-	create_post_btn.click()
-	time.sleep(10)
-	res = site.find_element('xpath', check_post)
-	res = res.text
-	site.close()
-	assert post_title == res
+def test_step3(browser):
+	logging.info('test 3 running')
+	testpage = OperationAddPost(browser)
+	testpage.add_post()
+	title = 'New title'
+	testpage.post_context(title=title, description='New description', content='New content')
+	assert title == testpage.check_post()
+
+
+def test_step4(browser):
+	logging.info('test 4 running')
+	testpage = OperationAddPost(browser)
+	testpage.go_to_site()
+	testpage.add_post()
+	title = 'New title2'
+	testpage.post_context(title=title, description='New description')
+	assert title == testpage.check_post()
+
+
+def test_step5(browser):
+	logging.info('test 5 running')
+	testpage = OperationAddPost(browser)
+	testpage.go_to_site()
+	testpage.add_post()
+	title = 'New title3'
+	testpage.post_context(title=title, content='New content3')
+	assert title == testpage.check_post()
+
+
+def test_step6(browser):
+	logging.info('test 6 running')
+	testpage = OperationAddPost(browser)
+	testpage.go_to_site()
+	testpage.add_post()
+	title = 'New title4'
+	testpage.post_context(title=title)
+	assert title == testpage.check_post()
+
+
+def test_step7(browser):
+	logging.info('test 7 running')
+	testpage = OperationContactUs(browser)
+	testpage.contact_click()
+	testpage.fill_content_contact(name='My name', email='mymail@mail.com', content='hello')
+	testpage.send_contact_info()
+	assert 'Form successfully submitted' == testpage.search_alert().text
+
