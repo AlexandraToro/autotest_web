@@ -1,50 +1,50 @@
-2023-08-28 11:16:S INFO ====== WebDriver manager ======
-2023-08-28 11:16:S INFO Get LATEST chromedriver version for google-chrome
-2023-08-28 11:16:S INFO Get LATEST chromedriver version for google-chrome
-2023-08-28 11:16:S INFO There is no [win64] chromedriver "116.0.5845.111" for browser google-chrome "116.0.5845.111" in cache
-2023-08-28 11:16:S INFO Get LATEST chromedriver version for google-chrome
-2023-08-28 11:16:S INFO WebDriver version 116.0.5845.96 selected
-2023-08-28 11:16:S INFO Modern chrome version https://edgedl.me.gvt1.com/edgedl/chrome/chrome-for-testing/116.0.5845.96/win32/chromedriver-win32.zip
-2023-08-28 11:16:S INFO About to download new driver from https://edgedl.me.gvt1.com/edgedl/chrome/chrome-for-testing/116.0.5845.96/win32/chromedriver-win32.zip
-2023-08-28 11:16:S INFO Driver downloading response is 200
-2023-08-28 11:16:S INFO Get LATEST chromedriver version for google-chrome
-2023-08-28 11:16:S INFO Driver has been saved in cache [C:\Users\Otomi\.wdm\drivers\chromedriver\win64\116.0.5845.111]
-2023-08-28 11:16:S INFO test1 running
-2023-08-28 11:16:S INFO Sent test to element //*[@id="login"]/div[1]/label/input
-2023-08-28 11:16:S INFO Sent test to element //*[@id="login"]/div[2]/label/input
-2023-08-28 11:16:S INFO Click logging button
-2023-08-28 11:16:S INFO find text 401 in error field //*[@id="app"]/main/div/div/div[2]/h2
-2023-08-28 11:16:S INFO test2 running
-2023-08-28 11:16:S INFO Sent legendary to element //*[@id="login"]/div[1]/label/input
-2023-08-28 11:16:S INFO Sent 11159fde95 to element //*[@id="login"]/div[2]/label/input
-2023-08-28 11:16:S INFO Click logging button
-2023-08-28 11:16:S INFO test 3 running
-2023-08-28 11:16:S INFO Add post
-2023-08-28 11:16:S INFO fill post: New title
-2023-08-28 11:16:S INFO fill post: New description
-2023-08-28 11:16:S INFO fill post: New content
-2023-08-28 11:16:S INFO button click
-2023-08-28 11:16:S INFO checking new post...
-2023-08-28 11:16:S INFO test 4 running
-2023-08-28 11:16:S INFO Add post
-2023-08-28 11:16:S INFO fill post: New title2
-2023-08-28 11:16:S INFO fill post: New description
-2023-08-28 11:16:S INFO button click
-2023-08-28 11:16:S INFO checking new post...
-2023-08-28 11:16:S INFO test 5 running
-2023-08-28 11:16:S INFO Add post
-2023-08-28 11:16:S INFO fill post: New title3
-2023-08-28 11:16:S INFO fill post: New content3
-2023-08-28 11:16:S INFO button click
-2023-08-28 11:16:S INFO checking new post...
-2023-08-28 11:16:S INFO test 6 running
-2023-08-28 11:16:S INFO Add post
-2023-08-28 11:16:S INFO fill post: New title4
-2023-08-28 11:16:S INFO button click
-2023-08-28 11:16:S INFO checking new post...
-2023-08-28 11:16:S INFO test 7 running
-2023-08-28 11:16:S INFO search and click button "Contact"
-2023-08-28 11:16:S INFO add name
-2023-08-28 11:16:S INFO add email
-2023-08-28 11:16:S INFO add content
-2023-08-28 11:16:S INFO Send info to contact us
+2023-08-28 11:21:S INFO ====== WebDriver manager ======
+2023-08-28 11:21:S INFO Get LATEST chromedriver version for google-chrome
+2023-08-28 11:21:S INFO Get LATEST chromedriver version for google-chrome
+2023-08-28 11:21:S INFO There is no [win64] chromedriver "116.0.5845.111" for browser google-chrome "116.0.5845.111" in cache
+2023-08-28 11:21:S INFO Get LATEST chromedriver version for google-chrome
+2023-08-28 11:21:S INFO WebDriver version 116.0.5845.96 selected
+2023-08-28 11:21:S INFO Modern chrome version https://edgedl.me.gvt1.com/edgedl/chrome/chrome-for-testing/116.0.5845.96/win32/chromedriver-win32.zip
+2023-08-28 11:21:S INFO About to download new driver from https://edgedl.me.gvt1.com/edgedl/chrome/chrome-for-testing/116.0.5845.96/win32/chromedriver-win32.zip
+2023-08-28 11:21:S INFO Driver downloading response is 200
+2023-08-28 11:21:S INFO Get LATEST chromedriver version for google-chrome
+2023-08-28 11:21:S INFO Driver has been saved in cache [C:\Users\Otomi\.wdm\drivers\chromedriver\win64\116.0.5845.111]
+2023-08-28 11:22:S INFO test1 running
+2023-08-28 11:22:S INFO Sent test to element //*[@id="login"]/div[1]/label/input
+2023-08-28 11:22:S INFO Sent test to element //*[@id="login"]/div[2]/label/input
+2023-08-28 11:22:S INFO Click logging button
+2023-08-28 11:22:S INFO find text 401 in error field //*[@id="app"]/main/div/div/div[2]/h2
+2023-08-28 11:22:S INFO test2 running
+2023-08-28 11:22:S INFO Sent legendary to element //*[@id="login"]/div[1]/label/input
+2023-08-28 11:22:S INFO Sent 11159fde95 to element //*[@id="login"]/div[2]/label/input
+2023-08-28 11:22:S INFO Click logging button
+2023-08-28 11:22:S INFO test 3 running
+2023-08-28 11:22:S INFO Add post
+2023-08-28 11:22:S INFO fill post: New title
+2023-08-28 11:22:S INFO fill post: New description
+2023-08-28 11:22:S INFO fill post: New content
+2023-08-28 11:22:S INFO button click
+2023-08-28 11:22:S INFO checking new post...
+2023-08-28 11:22:S INFO test 4 running
+2023-08-28 11:22:S INFO Add post
+2023-08-28 11:22:S INFO fill post: New title2
+2023-08-28 11:22:S INFO fill post: New description
+2023-08-28 11:22:S INFO button click
+2023-08-28 11:22:S INFO checking new post...
+2023-08-28 11:22:S INFO test 5 running
+2023-08-28 11:22:S INFO Add post
+2023-08-28 11:22:S INFO fill post: New title3
+2023-08-28 11:22:S INFO fill post: New content3
+2023-08-28 11:22:S INFO button click
+2023-08-28 11:22:S INFO checking new post...
+2023-08-28 11:22:S INFO test 6 running
+2023-08-28 11:22:S INFO Add post
+2023-08-28 11:22:S INFO fill post: New title4
+2023-08-28 11:22:S INFO button click
+2023-08-28 11:22:S INFO checking new post...
+2023-08-28 11:22:S INFO test 7 running
+2023-08-28 11:22:S INFO search and click button "Contact"
+2023-08-28 11:22:S INFO add name
+2023-08-28 11:22:S INFO add email
+2023-08-28 11:22:S INFO add content
+2023-08-28 11:22:S INFO Send info to contact us

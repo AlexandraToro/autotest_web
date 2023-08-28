@@ -1,13 +1,10 @@
-import time
-
-from BaseApp import BasePage
+from lecture2.pages.BaseApp import BasePage
 from selenium.webdriver.common.by import By
 import logging
 
 
 class ContactUsLocators:
 	LOCATOR_CONTACT_BTN = (By.XPATH, '//*[@id="app"]/main/nav/ul/li[2]')
-	# LOCATOR_CONTACT_BTN = (By.XPATH, '/html/body/div[1]/main/nav/ul/li[2]/a')
 	LOCATOR_CONTACT_NAME =(By.XPATH, '//*[@id="contact"]/div[1]/label/input')
 	LOCATOR_CONTACT_EMAIL = (By.XPATH, '//*[@id="contact"]/div[2]/label/input')
 	LOCATOR_CONTACT_CONTENT = (By.XPATH, '//*[@id="contact"]/div[3]/label/span/textarea')

@@ -1,6 +1,6 @@
 import time
 
-from BaseApp import BasePage
+from lecture2.pages.BaseApp import BasePage
 from selenium.webdriver.common.by import By
 import logging
 
