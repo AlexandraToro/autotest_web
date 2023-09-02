@@ -5,11 +5,10 @@ from webdriver_manager.firefox import GeckoDriverManager
 from webdriver_manager.chrome import ChromeDriverManager
 import pytest
 
-
 with open("./testdata.yaml") as f:
 	testdata = yaml.safe_load(f)
 	browser = testdata['browser']
-	
+
 login = testdata['login']
 
 
@@ -25,6 +24,21 @@ def browser():
 		driver = webdriver.Chrome(service=service, options=options)
 	yield driver
 	driver.quit()
+
+
+@pytest.fixture
+def title_api():
+	return "New post"
+
+
+@pytest.fixture
+def description_api():
+	return "New description"
+
+
+@pytest.fixture
+def content_api():
+	return "New content"
 
 #
 # @pytest.fixture()

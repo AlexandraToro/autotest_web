@@ -1,8 +1,8 @@
 import yaml
 
-from lecture2.pages.testpage import OperationHelper
-from lecture2.pages.post_page import OperationAddPost
-from lecture2.pages.contact_page import OperationContactUs
+from pages.testpage import OperationHelper
+from pages.post_page import OperationAddPost
+from pages.contact_page import OperationContactUs
 import logging
 
 with open("./testdata.yaml") as f:
